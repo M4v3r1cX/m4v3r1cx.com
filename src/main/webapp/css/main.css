@@ -6,16 +6,20 @@
     text-align: center;
 }
 
-.mainbody h1 {
-    color: #ffffff;
-}
-
 .header {
     padding-top: 10px;
 }
 
 .container {
-    margin: auto;
-    position: absolute;
+    background-color: #2b3538;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     border: 5px solid black;
+    border-radius: 20px;
+}
+
+.container h1 {
+    color: white;
+    text-align: center;
 }
