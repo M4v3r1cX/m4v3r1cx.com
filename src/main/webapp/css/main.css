@@ -8,5 +8,14 @@
 
 .mainbody h1 {
     color: #ffffff;
-    
+}
+
+.header {
+    padding-top: 10px;
+}
+
+.container {
+    margin: auto;
+    position: absolute;
+    border: 5px solid black;
 }
