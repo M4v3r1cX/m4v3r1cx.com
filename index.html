@@ -17,7 +17,57 @@
             const subtitle = document.getElementById("subtitle");
             subtitle.innerHTML = subtitles[Math.floor(Math.random() * subtitles.length)];
         });
+
+        function showAbout() {
+            var element = document.getElementById("mavemenu");
+            element.classList.add("d-none");
+
+            var element2 = document.getElementById("maveabout");
+            element2.classList.remove("d-none");
+        }
+
+        function hideAbout() {
+            var element = document.getElementById("mavemenu");
+            element.classList.remove("d-none");
+
+            var element2 = document.getElementById("maveabout");
+            element2.classList.add("d-none");
+        }
     </script>
+    <style>
+        .colour {
+            background-color: #1a1a1a;
+            font-family: "Noto Sans Mono", monospace;
+            color: white;
+            text-decoration: none;
+        }
+
+        .border {
+            border: 2px solid white;
+        }
+        a:link {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:hover {
+        color: white;
+        background-color: transparent;
+        }
+
+        a:active {
+        color: white;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+    </style>
   </head>
   <body class="colour">
     <div class="container my-5">
@@ -30,23 +80,34 @@
                 <img src="img/m4v3r1cx.png" alt="M4v3r1cX" height="150" width="150">
             </div>
         </div>
-        <div class="row text-center">
-            <div class="col border py-3">
+        <div id="mavemenu" class="row text-center">
+            <div class="col-md-4 border py-3">
                 <b>M U S I C</b><br /><br />
                 <a href="https://m4v3r1cx.bandcamp.com/"><img src="img/bc.svg" height="50" width="50"> Bandcamp</a><br />
                 <a href="https://open.spotify.com/artist/4nBL8VRUdC4gmKLw2kWpxy?si=cIVqYzhfSSylFbmH3IGXYA"><img src="img/sp.svg" height="45" width="45"> Spotify</a><br />
                 <a href="https://www.youtube.com/@M4v3r1cXMu5ik"><img src="img/yt.svg" height="45" width="45"> YouTube</a>
             </div>
-            <div class="col border py-3">
+            <div class="col-md-4 border py-3">
                 <b>S O F T W A R E</b><br /><br />
                 <a href="https://github.com/M4v3r1cX/"><img src="img/gu.svg" height="45" width="45"> GitHub profile</a>
             </div>
-            <div class="col border py-3">
+            <div class="col-md-4 border py-3">
                 <b>A B O U T</b><br /><br />
-                <a href="https://m4v3r1cx.bandcamp.com/"><img src="img/m4v3r1cx.png" height="45" width="45"> About Me</a><br />
-                <a href="https://m4v3r1cx.bandcamp.com/"><img src="img/insta.svg" height="45" width="45"> Instagram</a><br />
-                <a href="https://m4v3r1cx.bandcamp.com/"><img src="img/tiktok.svg" height="45" width="45"> TikTok</a><br />
+                <a href="#" onclick="showAbout();return false;"><img src="img/m4v3r1cx.png" height="45" width="45"> About Me</a><br />
+                <a href="https://www.instagram.com/m4v3r1cx/"><img src="img/insta.svg" height="45" width="45"> Instagram</a><br />
+                <a href="https://www.tiktok.com/@m4v3r1cxmu5ik/"><img src="img/tiktok.svg" height="45" width="45"> TikTok</a><br />
             </div>
+        </div>
+        <div id="maveabout" class="row text-start border d-none py-3">
+            <h3><b>About Me</b></h3>
+            <p>
+                Maverick is a Programmer, Video Game Developer, Web Designer, Music Producer, Composer, Guitar player, and bad joke writer. I love doing new stuff just to check out whether I can. I've been into programming ever since I played Doom at a really early age. My whole life I've been into computers - my dad was an early hacker too, although not a very good one lmao.<br /><br />
+                <b>The objective of this site is to replace linktree cause I hate it with a passion.</b><br /><br />
+                Also the point of this website was to use pure HTML- I failed at that since this site is using Bootstrap cause I wanted it to look nice on mobile, but on the flipside, I made the whole website on a single HTML. I like torturing myself. <br /><br />
+                
+                Musically speaking, as a producer I'm influenced by deadmau5 and New Order. As a composer I'm influenced by Metallica and Joy Division, and as a Guitar Player I'm influenced by almost any blues guitar player you can think of <i>excepting</i> John Mayer. I'm a Les Paul guy, sorry.<br />
+                <h3><a href="#" onclick="hideAbout();return false;"><- Back to the menu</a></h3>
+            </p>
         </div>
         <div class="row text-center">
             <div class="col border py-3">
